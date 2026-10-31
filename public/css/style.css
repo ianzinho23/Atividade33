@@ -1,0 +1,96 @@
+:root {
+  --fundo: #fcfcfa;
+  --painel: #e7eee5;
+  --texto: #213c36;
+  --suave: #58665f;
+  --placeholder: #7d8882;
+  --borda: #dde3dd;
+  --primaria: #286454;
+  --primaria-escura: #1f5043;
+  --erro: #b3261e;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; background: var(--fundo); color: var(--texto); min-height: 100vh; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+.pagina { display: flex; gap: 56px; padding: 28px; min-height: 100vh; }
+
+.boas-vindas { background: var(--painel); border-radius: 24px; width: 560px; flex-shrink: 0; padding: 40px; }
+.marca { display: flex; align-items: center; gap: 9px; font-size: 32px; color: var(--texto); }
+.marca img { width: 32px; height: 32px; }
+.mensagem { margin-top: 76px; max-width: 470px; display: flex; flex-direction: column; gap: 18px; }
+.mensagem h2 { font-size: 46px; font-weight: 500; line-height: 1.14; }
+.mensagem p { font-size: 16px; line-height: 1.6; color: var(--suave); }
+
+.acesso { flex: 1; min-width: 0; display: flex; flex-direction: column; padding: 12px 20px; }
+.navegacao { height: 40px; display: flex; align-items: center; justify-content: flex-end; gap: 12px; font-size: 14px; color: var(--suave); }
+.botao-contorno { height: 40px; padding: 0 16px; display: flex; align-items: center; gap: 8px; border: 1px solid var(--borda); border-radius: 10px; color: var(--primaria); font-weight: 600; font-size: 14px; }
+.botao-contorno:hover { background: var(--painel); }
+.area-form { flex: 1; display: flex; align-items: center; justify-content: center; padding: 24px 0; }
+.form { width: 400px; max-width: 100%; display: flex; flex-direction: column; gap: 24px; }
+.form.login { gap: 28px; }
+
+.apresentacao { display: flex; flex-direction: column; gap: 12px; }
+.identificador { font-size: 11px; color: var(--primaria); letter-spacing: .04em; }
+.apresentacao h1 { font-size: 34px; font-weight: 600; line-height: 1.2; }
+.apresentacao p { font-size: 14px; line-height: 1.6; color: var(--suave); }
+
+.botao-google { height: 52px; display: flex; align-items: center; justify-content: center; gap: 12px; background: #fff; border: 1px solid var(--borda); border-radius: 10px; color: var(--texto); font-size: 14px; width: 100%; }
+.botao-google span:first-child { font-size: 20px; }
+.botao-google:hover { background: var(--fundo); }
+
+.divisor { display: flex; align-items: center; gap: 16px; font-size: 12px; color: var(--placeholder); }
+.divisor::before, .divisor::after { content: ''; flex: 1; height: 1px; background: var(--borda); }
+
+.campos { display: flex; flex-direction: column; gap: 18px; }
+.form.login .campos { gap: 20px; }
+.campo { display: flex; flex-direction: column; gap: 8px; }
+.campo label { font-size: 14px; }
+.entrada { position: relative; }
+.entrada input { width: 100%; height: 52px; padding: 0 16px; background: #fff; border: 1px solid var(--borda); border-radius: 10px; font: inherit; font-size: 14px; color: var(--texto); }
+.entrada input::placeholder { color: var(--placeholder); }
+.entrada input:focus { outline: 2px solid var(--primaria); outline-offset: 0; border-color: var(--primaria); }
+.entrada.com-icone input { padding-right: 48px; }
+.olho { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); background: none; border: 0; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; }
+.dica { font-size: 12px; color: var(--suave); }
+.campo.invalido input { border-color: var(--erro); }
+.campo.invalido input:focus { outline-color: var(--erro); }
+.erro-campo { font-size: 12px; color: var(--erro); }
+
+.preferencias { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13px; }
+.marcar { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; line-height: 1.55; color: var(--suave); cursor: pointer; }
+.marcar input { appearance: none; -webkit-appearance: none; flex-shrink: 0; width: 17px; height: 17px; margin-top: 1px; background: #fff; border: 1px solid var(--borda); border-radius: 4px; cursor: pointer; }
+.marcar input:checked { background: var(--primaria) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat; border-color: var(--primaria); }
+.marcar input:focus-visible { outline: 2px solid var(--primaria); outline-offset: 2px; }
+.link { color: var(--primaria); font-weight: 400; }
+.link-forte { color: var(--primaria); font-weight: 600; }
+.link:hover, .link-forte:hover { text-decoration: underline; }
+.campo-termos .erro-campo { margin-left: 27px; }
+
+.botao-principal { height: 52px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--primaria); color: #fff; border: 0; border-radius: 10px; font-size: 15px; font-weight: 600; }
+.botao-principal:hover { background: var(--primaria-escura); }
+.botao-principal:disabled { opacity: .7; cursor: wait; }
+.botao-principal:focus-visible, .botao-contorno:focus-visible, .botao-google:focus-visible, .olho:focus-visible { outline: 2px solid var(--primaria); outline-offset: 2px; }
+.convite { display: flex; justify-content: center; gap: 5px; font-size: 13px; color: var(--suave); text-align: center; flex-wrap: wrap; }
+
+.alerta { padding: 12px 14px; border-radius: 10px; font-size: 13px; line-height: 1.5; }
+.alerta[hidden] { display: none; }
+.alerta.erro { background: #fdecea; color: var(--erro); border: 1px solid #f5c6c2; }
+.alerta.sucesso { background: var(--painel); color: var(--primaria); border: 1px solid var(--borda); }
+
+.rodape { height: 24px; display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--placeholder); }
+.rodape nav { display: flex; gap: 24px; color: var(--suave); }
+
+@media (max-width: 960px) {
+  .pagina { flex-direction: column; gap: 16px; padding: 16px; }
+  .boas-vindas { width: 100%; padding: 20px 24px; }
+  .mensagem { display: none; }
+  .acesso { padding: 0; }
+}
+@media (max-width: 480px) {
+  .navegacao { flex-wrap: wrap; justify-content: space-between; height: auto; gap: 8px; }
+  .apresentacao h1 { font-size: 28px; }
+  .rodape { flex-direction: column; height: auto; gap: 8px; align-items: flex-start; }
+  .rodape nav { gap: 16px; flex-wrap: wrap; }
+}

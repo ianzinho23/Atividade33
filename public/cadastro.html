@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="img/simbolo.svg">
+<title>Criar conta · elo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="pagina">
+  <aside class="boas-vindas">
+    <div class="marca"><img src="img/simbolo.svg" alt=""><span>elo</span></div>
+    <div class="mensagem">
+      <h2>Tudo começa com<br>uma conexão.</h2>
+      <p>Um espaço para novas possibilidades.<br>Do seu jeito, no seu ritmo.</p>
+    </div>
+  </aside>
+  <main class="acesso">
+    <div class="navegacao">
+      <span>Já tem uma conta?</span>
+      <a class="botao-contorno" href="index.html">Entrar <img src="img/seta-diagonal.svg" alt="" width="15" height="15"></a>
+    </div>
+    <div class="area-form">
+      <form class="form" id="form-cadastro" novalidate>
+        <div class="apresentacao">
+          <span class="identificador">UM NOVO COMEÇO</span>
+          <h1>Seu próximo passo<br>começa aqui.</h1>
+          <p>Crie sua conta. É simples e leva só um instante.</p>
+        </div>
+        <button type="button" class="botao-google" data-em-breve><span>G</span><span>Continuar com Google</span></button>
+        <div class="divisor">ou com seu e-mail</div>
+        <div class="alerta erro" id="alerta-form" role="alert" hidden></div>
+        <div class="campos">
+          <div class="campo" data-campo="nome">
+            <label for="nome">Nome completo</label>
+            <div class="entrada"><input type="text" id="nome" name="nome" placeholder="Como podemos chamar você?" autocomplete="name" maxlength="120" required></div>
+            <span class="erro-campo" aria-live="polite" id="erro-nome"></span>
+          </div>
+          <div class="campo" data-campo="email">
+            <label for="email">E-mail</label>
+            <div class="entrada"><input type="email" id="email" name="email" placeholder="voce@exemplo.com" autocomplete="email" maxlength="160" required></div>
+            <span class="erro-campo" aria-live="polite" id="erro-email"></span>
+          </div>
+          <div class="campo" data-campo="senha">
+            <label for="senha">Senha</label>
+            <div class="entrada com-icone">
+              <input type="password" id="senha" name="senha" placeholder="Crie uma senha segura" autocomplete="new-password" maxlength="72" required>
+              <button type="button" class="olho" data-alternar-senha="senha" aria-label="Mostrar senha"><img src="img/olho-fechado.svg" alt="" width="19" height="19"></button>
+            </div>
+            <span class="dica">Use pelo menos 8 caracteres, com letras e números.</span>
+            <span class="erro-campo" aria-live="polite" id="erro-senha"></span>
+          </div>
+        </div>
+        <div class="campo campo-termos" data-campo="termos">
+          <label class="marcar"><input type="checkbox" id="termos" name="termos"><span>Li e aceito os <a class="link" href="#">Termos de Uso</a> e a <a class="link" href="#">Política de Privacidade.</a></span></label>
+          <span class="erro-campo" aria-live="polite" id="erro-termos"></span>
+        </div>
+        <button type="submit" class="botao-principal" id="botao-cadastrar"><span>Criar minha conta</span><img src="img/seta-direita.svg" alt="" width="18" height="18"></button>
+        <p class="convite">Já faz parte? <a class="link-forte" href="index.html">Entre na sua conta</a></p>
+      </form>
+    </div>
+    <footer class="rodape">
+      <span>© 2026 elo</span>
+      <nav>
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Precisa de ajuda?</a>
+      </nav>
+    </footer>
+  </main>
+</div>
+<script src="js/comum.js"></script>
+<script src="js/cadastro.js"></script>
+</body>
+</html>
